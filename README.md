@@ -1,5 +1,12 @@
 # NgcTest
 
+This repo shows case when NGC fails to compile certain piece of code.
+
+To reproduce error, run:
+* `npm install` or `yarn` or whatever install
+* `npm run build` or `ng build --aot` (`ng build` wont fail)
+* watch it fails
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## Development server
