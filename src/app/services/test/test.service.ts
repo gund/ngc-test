@@ -1,4 +1,5 @@
 import { Injectable, Injector } from '@angular/core';
+import { TestInContextService } from './test-in-context.service';
 
 @Injectable()
 export class TestService {
@@ -6,22 +7,7 @@ export class TestService {
   constructor() { }
 
   getInContext<T>(context: T) {
-    return new TestServiceInContext<T>(context, this);
-  }
-
-}
-
-export class TestServiceInContext<T> extends TestService {
-
-  constructor(
-    private _context: T,
-    private _test: TestService
-  ) {
-    super();
-  }
-
-  getContext() {
-    return this._context;
+    return new TestInContextService<T>(context, this);
   }
 
 }

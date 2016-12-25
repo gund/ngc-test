@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TestService } from './services/test/test.service';
+import { TestInContextService } from './services/test/test-in-context.service';
 
 @NgModule({
   declarations: [
