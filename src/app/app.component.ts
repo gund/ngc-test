@@ -9,7 +9,7 @@ import { TestService } from './services/test/test.service';
 export class AppComponent {
   title = 'app works!';
 
-  testInCtx = this.testService.getInContext(123);
+  testInCtx = this.testService.getInContext('123');
 
   constructor(
     public testService: TestService
