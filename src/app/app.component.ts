@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TestService } from './services/test/test.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  testInCtx = this.testService.getInContext(123);
+
+  constructor(
+    public testService: TestService
+  ) {
+    console.log(this.testInCtx.getContext());
+  }
 }
