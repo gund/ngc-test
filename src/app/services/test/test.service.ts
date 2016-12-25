@@ -6,8 +6,8 @@ export class TestService {
 
   constructor() { }
 
-  getInContext<T>(context: T) {
-    return new TestInContextService<T>(context, this);
+  getInContext(context: string) {
+    return new TestInContextService<string>(context, this);
   }
 
 }
